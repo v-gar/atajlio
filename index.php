@@ -480,8 +480,7 @@ class RequestHandler
                        if(isset($_POST['action']) &&
                           isset($_POST['url'])) {
                            if($_POST['action'] == "newlink" &&
-                              $_POST['url'] != "" &&
-                              $_POST['customurl'] != "") {
+                              $_POST['url'] != "") {
                                /* Create the link */
                                $link = new Link(
                                    $_POST['url'],
