@@ -78,7 +78,7 @@ class Config
             'dbname' => self::$dbname,
             /*'dbhost' => self::$dbhost,
             'dbuser' => self::$dbuser,
-            'dbpass' => self::$dbpass,*/
+            'dbpass' => self::$dbpass, --- NOT READY --- */
             'minlinklength' => self::$minLinkLength,
         );
     }
@@ -138,7 +138,7 @@ class Config
 }
 
 /**
- *
+ * Checks whether database is existing and creates it when needed
  */
 class FirstSetup
 {
@@ -219,7 +219,7 @@ class FirstSetup
 }
 
 /**
- *
+ * Database methods
  */
 class Database
 {
@@ -276,10 +276,13 @@ class Database
 }
 
 /**
- *
+ * StringGenerator provides methods for createing a random string
  */
 class StringGenerator
 {
+    /* Source and author: Stephen Watkins, StackOverflow community
+    https://stackoverflow.com/a/4356295/3994578
+    License: https://creativecommons.org/licenses/by-sa/3.0/ */
     public static function generateRandomString($length = 10)
     {
         $characters = '0123456789';
@@ -295,7 +298,7 @@ class StringGenerator
 }
 
 /**
- * Link represents a
+ * Link represents an object carrying the original and shortened URL
  */
 class Link
 {
